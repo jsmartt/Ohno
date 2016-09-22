@@ -1,7 +1,7 @@
 $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name = "knife-ohno"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.date = "2012-06-15"
   s.authors = ["Mandi Walls"]
   s.email = ["mandi@opscode.com"]
