@@ -5,17 +5,26 @@ A messy client-status watcher plugin for Chef::Knife
 ## Preface
 
 Show long-lost chef client nodes.  Takes input as number of hours lost and 
-(right now) reprints them at the bottom of the output list with the number
-of hours out of sync they are.
+outputs the nodes that have not checked in in that many hours or more.
 
-## What it does
+## Installation
 
-knife ohno 6
+```
+gem install knife-ohno
+```
+
+## Usage
+
+```
+$ knife ohno 6
+```
 
 Shows you the clients that are 6 or more hours out of date.  Takes any integer number
 of hours as the command line argument.
 
-knife ohno 6 nocolor
+```
+$ knife ohno 6 --no-color
+```
 
 Shows you the clients that are 6 or more hours out of date, but it removes the colored printout.
 Useful for piping to sendmail for crons and whatnots.

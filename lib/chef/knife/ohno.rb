@@ -26,16 +26,10 @@ module Lnxchk
         exit 1
       end
 
-      if nocolor = name_args[1]
-        color = 0
-      else
-        color = 1
-      end
-
       hours = hours.to_i
 
       knife_status = Chef::Knife::Status.new
-      knife_status.ui = MyUI.new(STDOUT, STDERR, STDIN, {})
+      knife_status.ui = MyUI.new(STDOUT, STDERR, STDIN, config)
       knife_status.run
       hitlist = knife_status.ui.data
 
